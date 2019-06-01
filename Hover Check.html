@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Click / Hover effect</title>
+        <link rel="stylesheet" href="Hover Check.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+
+</head>
+<html>
+        <script type="text/javascript">
+        function init() {
+        var button = document.getElementById("button");
+        var state = false;
+       button.addEventListener("mouseover", function(e) {
+            
+            var pathone = document.getElementById("pathone");
+            var pathtwo = document.getElementById("pathtwo");
+            // Add Drawing Animation Class
+            pathone.classList = 'hoverarea__pathone hoverarea__pathone--draw';
+            pathtwo.classList = 'hoverarea__pathtwo hoverarea__pathtwo--draw';
+            state = false;
+        });
+
+        button.addEventListener("mouseleave", function(e) {
+            var pathone = document.getElementById("pathone");
+            var pathtwo = document.getElementById("pathtwo");
+            // Add Drawing Animation Class  
+            pathone.classList = 'hoverarea__pathone hoverarea__pathone--remove';
+            pathtwo.classList = 'hoverarea__pathtwo hoverarea__pathtwo--remove';
+        
+        }); 
+        // Mobile
+        button.addEventListener("click", function(e) {
+
+            if(state === false){
+                var pathone = document.getElementById("pathone");
+                var pathtwo = document.getElementById("pathtwo");
+                // Add Drawing Animation Class
+                pathone.classList = 'hoverarea__pathone hoverarea__pathone--draw';
+                pathtwo.classList = 'hoverarea__pathtwo hoverarea__pathtwo--draw';
+                state = true;   }
+            else{
+                var pathone = document.getElementById("pathone");
+                var pathtwo = document.getElementById("pathtwo");
+                // Add Drawing Animation Class
+                pathone.classList = 'hoverarea__pathone hoverarea__pathone--remove';
+                pathtwo.classList = 'hoverarea__pathtwo hoverarea__pathtwo--remove';
+                state= false;     
+            }
+            
+            
+            });
+            
+            
+        
+        }
+
+        </script>
+           
+            <body onload="init()">
+
+                    <h1>Like this?</h1>
+                    <button id="button">
+                           
+                        <div class="hoverarea">
+                                <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-labelledby="check">
+                                    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                    <path class="hoverarea__pathone" id="pathone" fill="none" stroke-width="3.5" stroke-opacity="null" fill-opacity="null" d="m2.00002,0c0,0.63636 0.06335,0.57675 0.61261,1.27273c1.40035,1.77439 2.70258,4.07528 4.9009,7c3.19903,4.25609 8.86351,7.93497 16.54054,15.27273c5.73789,5.48431 11.5688,10.13608 18.37838,16.54545c7.39013,6.95581 14.49599,13.64432 20.82883,18.45455c3.56597,2.7086 6.12613,4.45455 6.73874,4.45455l0,0l0,0" stroke="#8b0000"/>
+                                    <path class="hoverarea__pathtwo" id="pathtwo" fill="none" stroke-width="3.5" stroke-opacity="null" fill-opacity="null" d="m68.00002,0.4074c0,0 0,0 0,0c0,0.60185 0,1.2037 -0.64762,1.80556c-1.29524,1.2037 -3.11094,3.73328 -7.12381,7.22222c-5.02723,4.37086 -11.30248,8.69934 -16.83809,13.24074c-5.49287,4.50633 -9.54709,8.62284 -13.6,11.43519c-3.742,2.59661 -9.1138,6.54929 -12.30476,8.42593c-3.94624,2.32082 -6.16487,4.54892 -7.77143,6.62037c-0.84673,1.09176 -1.29524,1.80556 -1.29524,2.40741c0,0 -0.49883,0.0161 -0.64762,0.60185c-0.33271,1.30978 -0.64762,1.2037 -1.29524,1.80556c0,0 0,0 -0.64762,0.60185c-0.64762,0.60185 -0.64762,1.2037 -0.64762,1.2037c-0.64762,0.60185 -0.8373,1.37998 -1.29524,1.80556c-0.45794,0.42557 -0.64762,0.60185 -0.64762,0.60185c-0.64762,0.60185 -1.29524,1.2037 -1.29524,1.80556c0,0 -0.64762,0.60185 -0.64762,0.60185c0,0.60185 -0.64762,1.2037 -0.64762,1.80556l-0.64762,0.60185l0,0" stroke="#8b0000"/>    
+                                   </svg>
+                            </div>
+                                    
+
+                          </button>
+                </body>
+                </html>
+		
+		
+		
+		
+		
